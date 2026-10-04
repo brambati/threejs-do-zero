@@ -1,0 +1,60 @@
+/* ── RESET ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #050810;
+  overflow: hidden; /* canvas cobre tudo */
+}
+
+/* Canvas ocupa toda a tela */
+#canvas {
+  position: fixed;
+  inset: 0;
+  display: block;
+}
+
+/* UI sobreposta — pointer-events: none para não bloquear o canvas */
+.ui {
+  position: fixed;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #e2e4ed;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  pointer-events: none; /* cliques passam para o canvas */
+  z-index: 10;
+}
+
+.label {
+  font-size: .65rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #a78bfa;
+  margin-bottom: .75rem;
+  border: 1px solid rgba(167,139,250,.25);
+  padding: .25rem .75rem;
+  border-radius: 100px;
+  display: inline-block;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+em {
+  font-style: normal;
+  background: linear-gradient(135deg, #a78bfa, #00e5ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hint {
+  font-size: .8rem;
+  color: rgba(255,255,255,.3);
+  letter-spacing: .05em;
+}
